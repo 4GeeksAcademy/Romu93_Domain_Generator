@@ -5,24 +5,26 @@ import "./style.css";
 window.onload = function() {
   //write your code here
 
-  function domainGenereitor(pro, adje, nou, ext) {
-    var my_domain = "";
-    my_domain += pro[Math.floor(Math.random() * pro.length)];
-    my_domain += adje[Math.floor(Math.random() * adje.length)];
-    my_domain += nou[Math.floor(Math.random() * nou.length)];
-    my_domain += ext[Math.floor(Math.random() * ext.length)];
+  function domainGenereitor(pronoun, adjetive, noun, extencion) {
 
-    return my_domain;
+    var myDomain = "";
+    
+    myDomain += pronoun[Math.floor(Math.random() * pronoun.length)];
+    myDomain += adjetive[Math.floor(Math.random() * adjetive.length)];
+    myDomain += noun[Math.floor(Math.random() * noun.length)];
+    myDomain += extencion[Math.floor( Math.random() * extencion.length)];
+
+    return myDomain;
   }
 
-  var pronoun = ["The", "Our", "I", "We", "They"];
-  var adj = ["Great", "Big", "Deep", "Fabulous", "Shimmering"];
-  var noun = ["Jogger", "Racoon", "City", "Farm", "Space"];
+  var pronouns = ["The", "Our", "I", "We", "They"];
+  var adjectives = ["Great", "Big", "Deep", "Fabulous", "Shimmering"];
+  var nouns = ["Jogger", "Racoon", "City", "Farm", "Space"];
   var extencion = [".com", ".net", ".us", ".io"];
 
-  var resultado = domainGenereitor(pronoun, adj, noun, extencion);
+  var resultado = domainGenereitor(pronouns, adjectives, nouns, extencion);
 
-  var my_domain = document.getElementById("myDomain");
+  var myDomain = document.getElementById("myDomain");
 
-  my_domain.textContent = resultado;
+  myDomain.textContent = resultado;
 };
